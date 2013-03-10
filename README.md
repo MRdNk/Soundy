@@ -3,9 +3,7 @@ Soundy
 
 A very simply library using the Audio API (currently only available in Chrome)
 
-Currently baked into an expressjs (nodejs) app to load files etc...
-
-Actually implementation file in /public/javascripts/index.js
+An example baked into an Expressjs (nodejs) app can be found here: https://github.com/MRdNk/Soundy-Example
 
 Include soundy
 ------------
