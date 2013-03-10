@@ -3,7 +3,7 @@ var soundy = (function (opts) {
 	var that = {}
 	var opts = opts || {};
 	that.sounds = {}
-	that.version = 'v0.1.2'
+	that.version = 'v0.2.0'
 
 	var context
 
@@ -51,7 +51,8 @@ var soundy = (function (opts) {
 		var opts = opts || {}
 		// console.log(typeof opts.sounds, typeof opts.sounds === 'undefined')
 		if (typeof opts.sounds === 'undefined') {
-			opts.sounds = [
+			cb('no sounds to load')
+			/*opts.sounds = [
 	      {
 	          file: 'German-Reject1.wav'
 	        , name: 'german'
@@ -92,26 +93,28 @@ var soundy = (function (opts) {
 	          file: 'Swan1.wav'
 	        , name: 'swan'
 	      }
-	    ];
+	    ];*/
 		}
+		else {
 
-		init(function (err, ready) {
+			init(function (err, ready) {
 
-			if (err) {console.error(err)}
-			if (ready) {
-				var sounds = opts.sounds
-				var loadedCount = 0
-				var path = opts.path || '/audio/'
+				if (err) {console.error(err)}
+				if (ready) {
+					var sounds = opts.sounds
+					var loadedCount = 0
+					var path = opts.path || '/audio/'
 
-				for(var i=0; i <sounds.length; i++) {
-					loadSound(path + sounds[i].file, sounds[i].name, function (err, done) {
-						loadedCount ++
-						if (sounds.length === loadedCount) 
-							cb(null, 'loaded')
-					});
+					for(var i=0; i <sounds.length; i++) {
+						loadSound(path + sounds[i].file, sounds[i].name, function (err, done) {
+							loadedCount ++
+							if (sounds.length === loadedCount) 
+								cb(null, 'loaded')
+						});
+					}
 				}
-			}
-		})
+			})
+		}
 	}
 
 	// window.addEventListener('load', init, false)
@@ -129,7 +132,7 @@ var soundy = (function (opts) {
 
 }())
 
-var options = {};
+/*var options = {};
 options.sounds = [
   {
       file: 'German-Reject1.wav'
@@ -144,4 +147,4 @@ options.sounds = [
 soundy.load(options, function (err, done) {
 	console.log(err, done)
 	// soundy.play(soundy.sounds.german)
-})
+})*/

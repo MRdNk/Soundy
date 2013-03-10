@@ -1,9 +1,9 @@
 Soundy
 ======
 
-A simply library using the Audio API
+A very simply library using the Audio API (currently only available in Chrome)
 
-Currently baked into an expres app to get play with the API and load files without XSS issues.
+Currently baked into an expressjs (nodejs) app to load files etc...
 
 Actually implementation file in /public/javascripts/index.js
 
