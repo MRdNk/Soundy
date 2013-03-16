@@ -49,51 +49,8 @@ var soundy = (function (opts) {
 
 	function loadLibrary (opts, cb) {
 		var opts = opts || {}
-		// console.log(typeof opts.sounds, typeof opts.sounds === 'undefined')
 		if (typeof opts.sounds === 'undefined') {
 			cb('no sounds to load')
-			/*opts.sounds = [
-	      {
-	          file: 'German-Reject1.wav'
-	        , name: 'german'
-	      }
-	      , {
-	          file: 'Moo-Panicked2.wav'
-	        , name: 'moo'
-	      }
-	      , {
-	          file: 'Baa1.wav'
-	        , name: 'baa'
-	      }
-	      , {
-	          file: 'Dog1.wav'
-	        , name: 'dog'
-	      }
-	      , {
-	          file: 'Dog2.wav'
-	        , name: 'dog2'
-	      }
-	      , {
-	          file: 'Dolphin1.wav'
-	        , name: 'dolphin'
-	      }
-	      , {
-	          file: 'Horse1.wav'
-	        , name: 'horse'
-	      }
-	      , {
-	          file: 'Pig1.wav'
-	        , name: 'pig'
-	      }
-	      , {
-	          file: 'Quack-Donald.wav'
-	        , name: 'duck'
-	      }
-	      , {
-	          file: 'Swan1.wav'
-	        , name: 'swan'
-	      }
-	    ];*/
 		}
 		else {
 
@@ -117,8 +74,6 @@ var soundy = (function (opts) {
 		}
 	}
 
-	// window.addEventListener('load', init, false)
-
 	function add (file, name) {
 		console.log(file, name);	
 	}
@@ -132,6 +87,7 @@ var soundy = (function (opts) {
 
 }())
 
+// Example
 /*var options = {};
 options.sounds = [
   {
